@@ -40,7 +40,7 @@ def read_sensor():
     sensor_value = adc.read_adc(0, gain=GAIN)  # Reading from ADC channel 0
     # Convert the sensor reading to a volume (mL)
     max_sensor_value = 32767  # Max value of ADS1115 (15-bit ADC)
-    max_volume = 50.0  # Assuming the syringe can hold up to 50 mL
+    max_volume = 51.0  # Assuming the syringe can hold up to 50 mL
 
     # Calculate the current volume drawn based on the sensor value
     current_volume = (sensor_value / max_sensor_value) * max_volume
